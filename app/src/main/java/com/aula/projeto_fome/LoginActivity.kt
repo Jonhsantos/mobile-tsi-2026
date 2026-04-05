@@ -17,8 +17,8 @@ import retrofit2.http.Query
 
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var inputEmail: EditText
-    private lateinit var inputSenha: EditText
+    private lateinit var emailEditText: EditText
+    private lateinit var passwordEditText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +32,8 @@ class LoginActivity : AppCompatActivity() {
 
         val jornada = intent.getBooleanExtra("JORNADA", false)
         val btnVoltar = findViewById<ImageButton>(R.id.btnVoltar)
-        inputEmail = findViewById(R.id.inputEmailLogin)
-        inputSenha = findViewById(R.id.inputSenhaLogin)
+        emailEditText = findViewById(R.id.inputEmailLogin)
+        passwordEditText = findViewById(R.id.inputSenhaLogin)
         val btnEsqueciSenha = findViewById<Button>(R.id.btnEsqueciSenha)
         val btnEntar = findViewById<Button>(R.id.btnEntrar)
         val btnCriarConta = findViewById<Button>(R.id.btnCriarConta)
@@ -56,12 +56,12 @@ class LoginActivity : AppCompatActivity() {
         }
     }
     private fun blockLogin() {
-        val email = inputEmail.text.toString().trim()
-        val password = inputSenha.text.toString().trim()
+        val email = emailEditText.text.toString().trim()
+        val password = passwordEditText.text.toString().trim()
 
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.15.100/ ")
+            .baseUrl("http://192.168.15.100")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val apiService = retrofit.create(ApiService::class.java)
@@ -107,7 +107,7 @@ class LoginActivity : AppCompatActivity() {
 
 
     interface ApiService {
-        @GET("/apis/login.php")
+        @GET("/projeto_fome_api/login.php")
         fun login(
             @Query("usuario") usuario: String, @Query("senha") senha: String
         ): Call<List<LoginResponse>>
