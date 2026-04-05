@@ -19,6 +19,7 @@ import retrofit2.http.Query
 class LoginActivity : AppCompatActivity() {
     private lateinit var inputEmail: EditText
     private lateinit var inputSenha: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -31,8 +32,8 @@ class LoginActivity : AppCompatActivity() {
 
         val jornada = intent.getBooleanExtra("JORNADA", false)
         val btnVoltar = findViewById<ImageButton>(R.id.btnVoltar)
-        val inputEmail = findViewById<EditText>(R.id.inputEmailLogin)
-        val inputSenha = findViewById<EditText>(R.id.inputSenhaLogin)
+        inputEmail = findViewById(R.id.inputEmailLogin)
+        inputSenha = findViewById(R.id.inputSenhaLogin)
         val btnEsqueciSenha = findViewById<Button>(R.id.btnEsqueciSenha)
         val btnEntar = findViewById<Button>(R.id.btnEntrar)
         val btnCriarConta = findViewById<Button>(R.id.btnCriarConta)
