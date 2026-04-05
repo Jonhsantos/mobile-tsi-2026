@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/fundoinicio"
+    >
+
+
+    <ImageView
+        android:id="@+id/gradienteFundo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/gradiente"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:elevation="12dp"
+        android:translationZ="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logofome" />
+
+    <TextView
+        android:id="@+id/msgBemVindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/plus_jakarta_bold"
+        android:text="BEM-VINDO"
+        android:textColor="#FFDF90"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImg" />
+
+    <TextView
+        android:id="@+id/textoBemVindo"
+        android:layout_width="253dp"
+        android:layout_height="96dp"
+        android:fontFamily="@font/plus_jakarta_regular"
+        android:text="Escolha como deseja usar o app"
+        android:textAlignment="center"
+        android:textColor="#F8F9FA"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/msgBemVindo"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <Button
+        android:id="@+id/btnCliente"
+        android:layout_width="342dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/amarelo"
+        android:elevation="12dp"
+        android:translationZ="8dp"
+        android:fontFamily="@font/plus_jakarta_semibold"
+        android:text=" Sou Cliente"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:cornerRadius="32px"
+        app:icon="@drawable/user_icon"
+        app:iconPadding="8px"
+        app:iconSize="32dp"
+        app:iconTint="#191C1D"
+        app:iconTintMode="src_atop"
+        app:layout_constraintBottom_toTopOf="@+id/btnLojista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnLojista"
+        android:layout_width="343dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="196dp"
+        android:backgroundTint="@color/amarelo"
+        android:elevation="12dp"
+        android:translationZ="8dp"        android:fontFamily="@font/plus_jakarta_semibold"
+        android:text=" Sou Logista"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#191C1D"
+        android:textSize="16sp"
+        app:cornerRadius="32px"
+        app:icon="@drawable/market_icon"
+        app:iconPadding="8px"
+        app:iconSize="32dp"
+        app:iconTint="#191C1D"
+        app:iconTintMode="src_atop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

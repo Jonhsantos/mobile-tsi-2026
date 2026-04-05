@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imagedefundo"
+    tools:context=".CadastroClienteActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="426dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnVoltarCriarContaCliente"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="23dp"
+        android:backgroundTint="#F8F9FA"
+        android:scaleType="center"
+        android:src="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar4"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="248dp"
+        android:fontFamily="@font/plus_jakarta_bold"
+        android:text="Criar conta"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar4"
+        app:layout_constraintVertical_bias="0.681" />
+
+    <LinearLayout
+        android:id="@+id/senhaCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="56dp"
+        android:background="@color/gray_super_light"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnCriarContaCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailClienteCadastro"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Senha"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/inputSenhaCadsastroCliente"
+            android:layout_width="match_parent"
+
+            android:layout_height="48dp"
+            android:background="@null"
+
+            android:fontFamily="@font/plus_jakarta_light"
+            android:hint="********"
+
+            android:inputType="textPassword"
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/gray_light"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+        app:srcCompat="@drawable/letraosemfundo" />
+
+    <LinearLayout
+        android:id="@+id/nomeCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/gray_super_light"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/EmailClienteCadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Nome"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/inputNomeCadastroCliente"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:background="@null"
+            android:fontFamily="@font/plus_jakarta_light"
+
+            android:hint="seu nome"
+            android:inputType="text"
+
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/gray_light"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/EmailClienteCadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="35dp"
+        android:background="@color/gray_super_light"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/senhaCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeCliente"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/inputEmailCadastroCliente"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:background="@null"
+            android:fontFamily="@font/plus_jakarta_light"
+
+            android:hint="seu@email.com"
+            android:inputType="textEmailAddress"
+
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/gray_light"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCriarContaCliente"
+        android:layout_width="341dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="212dp"
+        android:backgroundTint="@color/amarelo"
+        android:elevation="8dp"
+        android:fontFamily="@font/plus_jakarta_regular"
+        android:text=" Criar conta"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#191C1D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:translationZ="8dp"
+        app:cornerRadius="32px"
+        app:icon="@drawable/user_icon"
+        app:iconSize="32dp"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senhaCliente" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

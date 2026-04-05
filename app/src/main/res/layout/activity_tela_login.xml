@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imagedefundo"
+    tools:context=".LoginActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="426dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnVoltar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="23dp"
+        android:backgroundTint="#F8F9FA"
+        android:scaleType="center"
+        android:src="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.391"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="283dp"
+        android:fontFamily="@font/plus_jakarta_bold"
+        android:text="Entrar"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnVoltar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.59" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="546dp"
+        android:layout_height="209dp"
+        android:layout_marginBottom="4dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/letraosemfundo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plus_jakarta_regular"
+        android:text="Bem-Vindo"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <LinearLayout
+        android:id="@+id/EmailCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="412dp"
+        android:background="@color/gray_super_light"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <!-- LABEL -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/inputEmailLogin"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:background="@null"
+            android:fontFamily="@font/plus_jakarta_light"
+
+            android:hint="seu@email.com"
+            android:inputType="textEmailAddress"
+
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/gray_light"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="11dp"
+        android:background="@color/gray_super_light"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnEsqueciSenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailCliente">
+
+        <!-- LABEL -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Senha"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/inputSenhaLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@null"
+            android:fontFamily="@font/plus_jakarta_light"
+
+            android:hint="**********"
+            android:inputType="textPassword"
+
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/gray_light"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnEsqueciSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/plus_jakarta_bold"
+        android:text="Esqueci minha senha"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnEntrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="341dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="11dp"
+        android:backgroundTint="@color/amarelo"
+        android:elevation="8dp"
+        android:translationZ="12dp"
+        android:fontFamily="@font/plus_jakarta_regular"
+        android:text=" Entrar"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#191C1D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="32px"
+        app:iconSize="32dp"
+        app:iconTintMode="src_atop"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEsqueciSenha" />
+
+    <Button
+        android:id="@+id/btnCriarConta"
+        android:layout_width="328dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="@color/white"
+        android:elevation="8dp"
+        android:translationZ="12dp"
+        android:fontFamily="@font/plus_jakarta_regular"
+        android:text="Criar conta"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#191C1D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="32px"
+        app:iconTintMode="src_atop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2px" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif"
+        android:text="______________ ou ______________"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/btnCriarConta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
